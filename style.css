@@ -49,7 +49,9 @@ input,
     /* mobile */
 
     --title-mobile: 40px;
-    --subtitle-mobile: 26px
+    --subtitle-mobile: 26px;
+    /* padding */
+    --button: 15px 25px;
 }
 
 
@@ -82,4 +84,205 @@ input,
 .subtitle {
     font-size: var(--subtitle-auto);
     font-weight: 700;
+}
+
+/* Wrapper */
+
+.wrapper {
+    max-width: 1134px;
+    margin: 0 auto;
+}
+
+.cover {
+    width: 100%;
+    border-radius: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -61px;
+    padding: 185px 0 248px 0;
+    /* Style */
+    background: var(--white-color);
+}
+
+.cover-2 {
+    width: 99%;
+
+    border-radius: 50px;
+    background-image: url(./assets/images/Rectangle\ 76.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* Header */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+
+    &>.n-menu {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+
+        & a {
+            text-decoration: none;
+            color: var(--content-color);
+        }
+    }
+
+    &>.n-apply>.button {
+        padding: var(--button);
+        border-radius: 30px;
+        border: 1px solid transparent;
+        cursor: pointer;
+        /* main */
+        background: var(--main-color);
+        color: var(--bg-color);
+    }
+}
+
+.hero {
+    padding: 144px 0 0 0;
+    background-image: url(./assets/images/Rectangle\ 52.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &>.wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 112px;
+
+        &>.hero-text {
+            max-width: 512px;
+
+            &>h3 {
+                margin-top: 40px;
+            }
+
+            &>p {
+                margin-top: 15px;
+            }
+
+            &>button {
+                padding: var(--button);
+                border-radius: 30px;
+                background: var(--accent-color);
+                color: var(--white-color);
+                border: 1px solid transparent;
+                cursor: pointer;
+                margin-top: 40px;
+            }
+        }
+
+        &>.hero-adventages {
+            display: flex;
+
+            &>div {
+                padding: 24px 20px 30px;
+
+                &>div {
+                    margin-bottom: 15px;
+                }
+
+                &>h3 {
+                    margin-bottom: 9px;
+                }
+
+                &>p {
+                    opacity: 0.5;
+                }
+            }
+
+            &>:first-child {
+                background: var(--bg-2-color);
+                border-radius: 15px 0 0 15px;
+
+                &>h3 {
+                    color: var(--content-color);
+                }
+
+                &>p {
+                    color: var(--content-color);
+                }
+            }
+
+            &>:last-child {
+                background: var(--accent-color);
+                border-radius: 0 15px 15px 0;
+
+                &>h3 {
+                    color: var(--white-color);
+                }
+
+                &>p {
+                    color: var(--white-color);
+                }
+            }
+        }
+    }
+}
+
+/* Header end */
+
+
+/* Main */
+.a-dot {
+    position: absolute;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    right: -15px;
+    top: 0;
+    background: var(--accent-color);
+}
+
+.service {
+
+    &>:first-child {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 50px;
+
+        &>h3 {
+            position: relative;
+        }
+
+        &>button {
+            padding: var(--button);
+            border-radius: 30px;
+            border: 1px solid var(--main-color);
+            background: var(--white-color);
+            color: var(--main-color);
+            cursor: pointer;
+        }
+    }
+
+    &>.s-cards {
+        display: flex;
+        gap: 50px;
+
+        &>:first-child {
+            display: flex;
+            flex-direction: column;
+
+            &>.card {
+                padding: 25px;
+                border-radius: 20px;
+                background: var(--bg-2-color);
+
+                &>.card-icon {
+                    background: var(--white-color);
+                }
+
+                &>.card-link {
+                    background: var(--white-color);
+                }
+            }
+        }
+    }
 }
