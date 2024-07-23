@@ -13,7 +13,6 @@ function myFunction(x) {
         document.body.classList.remove('mobile-font')
     }
 }
-alert(window.outerWidth)
 myFunction(view)
 function OpenMenu() {
     document.querySelector('.hamburger').classList.remove('d-none')
