@@ -3,7 +3,17 @@ let scrollCard = document.querySelector('#scroll')
 let Overlay = document.getElementById('overlay')
 let switchBtn = document.querySelector('.hamb-btn')
 let HCloseBtn = document.querySelector('#h-close-btn')
+let view = window.matchMedia("(max-width: 414px)")
 
+function myFunction(x) {
+    if (x.matches) {
+        document.body.classList.add('mobile-font')
+    } else {
+        document.body.classList.remove('mobile-font')
+    }
+}
+
+myFunction(view)
 function OpenMenu() {
     document.querySelector('.hamburger').classList.remove('d-none')
     Overlay.classList.remove('d-none')
@@ -22,7 +32,6 @@ HCloseBtn.addEventListener('click', (e) => {
     e.stopPropagation()
     CloseMenu()
 })
-
 
 Overlay.addEventListener('mouseup', (e) => {
     e.stopPropagation()

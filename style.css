@@ -55,17 +55,19 @@ input,
     --button-auto: 16px;
     --title-auto: 50px;
     --subtitle-auto: 35px;
+    /* button */
+    --button: 15px 25px;
+}
 
+.tablet-font {
     /* tablet */
 
-    --subtitle-tablet: 30px;
+    --subtitle-auto: 30px;
+}
 
-    /* mobile */
-
-    --title-mobile: 40px;
-    --subtitle-mobile: 26px;
-    /* padding */
-    --button: 15px 25px;
+.mobile-font {
+    --title-auto: 40px;
+    --subtitle-auto: 26px;
 }
 
 
@@ -956,7 +958,7 @@ footer {
 
 }
 
-@media (max-width: 768px) {
+@media (min-width: 414px) and (max-width: 768px) {
     /* Phone sizes */
 
     nav {
@@ -1159,4 +1161,266 @@ footer {
         border-top: 1px solid var(--content-color)
     }
 
+}
+
+@media (max-width: 414px) {
+
+    /* phones */
+    nav {
+        position: relative;
+        max-width: 390px;
+    }
+
+    .n-menu {
+        display: none !important;
+    }
+
+    .hero {
+        padding: 29px 0 0 0;
+        max-width: 414px;
+        background-image: url(./assets/images/banner_img\ \(1\).png);
+    }
+
+    .hero-text {
+        max-width: 384px;
+    }
+
+    .wrapper {
+        max-width: 414px;
+        padding: 0 15px;
+        margin: 0 auto;
+        min-width: 30px;
+    }
+
+    .hero {
+        &>.wrapper {
+            max-width: 414px;
+            display: flex;
+            flex-direction: column;
+            gap: 112px;
+
+            &>.hero-text {
+                &>button {
+                    width: 100%;
+                    margin-top: 30px;
+                }
+            }
+        }
+
+
+    }
+
+    .service {
+        position: relative;
+
+        &> :first-child {
+            &>button {
+                width: 100%;
+                position: absolute;
+                bottom: -70px;
+            }
+        }
+
+        &>.s-cards {
+            display: flex;
+            gap: 0;
+            position: relative;
+            padding-top: 215px;
+
+
+            &>:last-child {
+                top: 0;
+                position: absolute;
+                background-image: url(./assets/images/pic\ \(2\).png);
+                width: 384px;
+                height: 215px;
+            }
+        }
+    }
+
+    .team {
+        &>.t-box {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+
+    .cover-2 {
+        width: 99%;
+        border-radius: 50px;
+        background-image: url(./assets/images/about_company_bg\ \(1\).png);
+        max-width: 400px;
+        padding: 30px 0;
+    }
+
+    .about-company {
+        width: 100%;
+
+        &>.grid {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+
+    .partners {
+        &>.p-title {
+            &>:last-child {
+                display: none;
+            }
+        }
+    }
+
+    .contacts {
+        padding-bottom: 400px;
+        margin-top: 70px;
+        position: relative;
+
+        &>.c-title {
+            position: static;
+
+            &>div {
+                display: flex;
+                flex-direction: column;
+                gap: 9px;
+                z-index: 2;
+                position: absolute;
+                bottom: 60px;
+                left: 30px;
+                width: 100%;
+            }
+        }
+
+        &>.c-map {
+            display: flex;
+            margin-top: 200px;
+            bottom: 0;
+
+            &>iframe {
+                max-width: 414px;
+                max-height: 373px;
+            }
+        }
+
+    }
+
+    .contact-us {
+        position: relative;
+
+        & .form {
+            position: static;
+
+            .c-u-form {
+                position: absolute;
+                top: 460px;
+                padding: 15px;
+            }
+
+            .c-u-image {
+                background-image: url(./assets/images/form_pic_-1.png);
+                width: 415px;
+                height: 508px;
+                top: 0;
+                z-index: 4;
+                left: -20px;
+                position: absolute;
+            }
+        }
+    }
+
+    .cover-3 {
+        background-image: url(./assets/images/content_banner_img.png);
+        max-width: 414px;
+        height: 1130px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: -100px auto 0;
+        z-index: 1;
+    }
+
+    .cover {
+        margin-top: -100px;
+        padding: 140px 0 170px 0;
+    }
+
+    .n-apply {
+
+        &>:first-child {
+            display: none;
+        }
+
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .hamb-btn {
+        outline: none;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+        display: inline;
+    }
+
+    .hamburger {
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: var(--bg-2-color);
+        height: 100%;
+        z-index: 6;
+    }
+
+    .h-container {
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        position: relative;
+        height: 100%;
+
+
+        &>button {
+            background: transparent;
+            border: none;
+            outline: none;
+            position: absolute;
+            z-index: 6;
+            right: 30px;
+            top: 30px;
+            cursor: pointer;
+        }
+    }
+
+    .h-logo {
+        margin-top: 40px;
+        margin-bottom: 50px;
+    }
+
+    .h-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: flex-start;
+        list-style: none;
+
+        &>li>a {
+            text-decoration: none;
+            color: var(--main-color);
+        }
+    }
+
+    .h-socials {
+        width: 80%;
+        display: flex;
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+    /* Etc */
 }
