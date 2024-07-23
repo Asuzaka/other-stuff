@@ -7,12 +7,13 @@ let view = window.matchMedia("(max-width: 414px)")
 
 function myFunction(x) {
     if (x.matches) {
+
         document.body.classList.add('mobile-font')
     } else {
         document.body.classList.remove('mobile-font')
     }
 }
-
+alert(window.outerWidth)
 myFunction(view)
 function OpenMenu() {
     document.querySelector('.hamburger').classList.remove('d-none')
