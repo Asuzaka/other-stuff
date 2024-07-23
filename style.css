@@ -1163,7 +1163,7 @@ footer {
 
 }
 
-@media (max-width: 414px) {
+@media (min-width: 0px) and (max-width: 414px) {
 
     /* phones */
     nav {
@@ -1206,8 +1206,6 @@ footer {
                 }
             }
         }
-
-
     }
 
     .service {
@@ -1421,6 +1419,18 @@ footer {
         justify-content: space-between;
     }
 
+    .f-menu {
+        &>.f-socials {
+            position: static;
+            margin-top: 30px;
 
-    /* Etc */
+        }
+    }
+
+    .authority {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
 }
